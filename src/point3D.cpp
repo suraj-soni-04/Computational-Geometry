@@ -1,56 +1,50 @@
-#include "../headers/point3D.h"
+#include "../headers/Point3D.h"
 
-Geometry ::Point3D::Point3D() : mX(0), mY(0), mZ(0) {}
+Point3D::Point3D() : mX(0), mY(0), mZ(0) {}
 
-Geometry ::Point3D::Point3D(double x, double y, double z) : mX(x), mY(y), mZ(z) {}
+Point3D::Point3D(double x, double y, double z) : mX(x), mY(y), mZ(z) {}
 
-Geometry ::Point3D::~Point3D() {}
+Point3D::~Point3D() {}
 
-double Geometry ::Point3D::x() const
+double Point3D::getX() const
 {
-    return mX;
+    return this->mX;
 }
 
-double Geometry ::Point3D::y() const
+double Point3D::getY() const
 {
-    return mY;
+    return this->mY;
 }
 
-double Geometry ::Point3D::z() const
+double Point3D::getZ() const
 {
-    return mZ;
+    return this->mZ;
 }
 
-void Geometry ::Point3D::setX(double x)
+void Point3D::setX(double x)
 {
-    mX = x;
+    this->mX = x;
 }
-void Geometry ::Point3D::setY(double y)
+void Point3D::setY(double y)
 {
-    mY = y;
-}
-
-void Geometry ::Point3D::setZ(double z)
-{
-    mZ = z;
+    this->mY = y;
 }
 
-bool Geometry ::Point3D::operator<(const Point3D &other) const
+void Point3D::setZ(double z)
 {
-    if (mX < other.mX)
-        return true;
-    if (mX > other.mX)
-        return false;
-
-    if (mY < other.mY)
-        return true;
-    if (mY > other.mY)
-        return false;
-
-    return mZ < other.mZ;
+    this->mZ = z;
 }
 
-bool Geometry ::Point3D::operator==(const Point3D &other) const
+bool Point3D::operator<(const Point3D &other) const
 {
-    return (mX == other.mX) && (mY == other.mY) && (mZ == other.mZ);
+    if (this->mX < other.mX) return true;
+    if (this->mX > other.mX) return false;
+    if (this->mY < other.mY) return true;
+    if (this->mY > other.mY) return false;
+    return this->mZ < other.mZ;
+}
+
+bool Point3D::operator==(const Point3D &other) const
+{
+    return (this->mX == other.mX) && (this->mY == other.mY) && (this->mZ == other.mZ);
 }

@@ -3,8 +3,8 @@ class Matrix
 {
 public:
     Matrix();
-    Matrix(double a, double b, double c, double d, double e, double f, double g, double h, double i);
-    ~Matrix();
+    Matrix(double, double , double , double , double , double , double , double , double );
+    ~Matrix()=default;
 
     double getElement(int row, int col) const;
 

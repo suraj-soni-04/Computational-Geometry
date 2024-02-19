@@ -4,19 +4,19 @@ class Point3D
 {
 public:
     Point3D();
-    Point3D(double x, double y, double z);
-    ~Point3D();
+    Point3D(double, double, double);
+    ~Point3D()=default;
 
     double getX() const;
-    double getY() const;
+    double getY() const; 
     double getZ() const;
 
-    void setX(double x);
-    void setY(double y);
-    void setZ(double z);
+    void setX(double);
+    void setY(double);
+    void setZ(double);
 
-    bool operator==(const Point3D &other) const;
-    bool operator<(const Point3D &other) const;
+    bool operator==(const Point3D &) const;
+    bool operator<(const Point3D &) const;
 
 protected:
     double mX;

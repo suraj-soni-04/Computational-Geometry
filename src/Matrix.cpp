@@ -7,7 +7,7 @@ Matrix::Matrix()
     {
         for (int j = 0; j < 3; j++)
         {
-            this->matrix[i][j] = (i == j) ? 1.0 : 0.0;
+            this->matrix[i][j]=0.0;
         }
     }
 }
@@ -22,9 +22,6 @@ Matrix::Matrix(double a, double b, double c, double d, double e, double f, doubl
     this->matrix[2][0] = g;
     this->matrix[2][1] = h;
     this->matrix[2][2] = i;
-}
-Matrix::~Matrix()
-{
 }
 
 double Matrix::getElement(int row, int col) const

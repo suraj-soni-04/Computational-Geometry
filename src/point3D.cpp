@@ -4,8 +4,6 @@ Point3D::Point3D() : mX(0), mY(0), mZ(0) {}
 
 Point3D::Point3D(double x, double y, double z) : mX(x), mY(y), mZ(z) {}
 
-Point3D::~Point3D() {}
-
 double Point3D::getX() const
 {
     return this->mX;

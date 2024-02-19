@@ -6,11 +6,10 @@ class Plane
 public:
     Plane();
     Plane(GeomVector &, Point3D &);
-    ~Plane();
+    ~Plane()=default;
 
     GeomVector getNormal() const;
     Point3D getPointOnPlane() const;
-
 
 private:
     GeomVector mNormal;

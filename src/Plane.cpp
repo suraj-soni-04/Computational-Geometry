@@ -14,4 +14,3 @@ Point3D Plane::getPointOnPlane() const
     return this->mPointOnPlane;
 }
  
-Plane::~Plane() {}

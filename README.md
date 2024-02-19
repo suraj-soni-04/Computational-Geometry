@@ -53,7 +53,7 @@ b. **Parameterized Constructor**:
 c. **getElement**:
    - Retrieves the element at the specified row and column of the matrix.
 ----------------------------------------
-**Plane.cpp**
+*Plane.cpp*
 
 a. **Default Constructor**:
    - Initializes the plane with a default normal vector and a point at the origin.
@@ -88,6 +88,7 @@ f. **operator==**:
    - Overloaded `==` operator to check if two points are equal based on their coordinates.
 -------------------------------------------
 *Writer.cpp*
+
 a. **write**:
    - Writes the geometric vectors provided in the `vectors` vector to the specified file indicated by `filePath`.
    - Opens the file for writing using `ofstream`.
